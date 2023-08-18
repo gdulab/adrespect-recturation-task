@@ -1,0 +1,49 @@
+//fonts
+$font-main: 'Inter', sans-serif;
+$font-additional: 'Montserrat', sans-serif;
+
+//colors
+$color-primary:  #DCC1AB;
+$color-secondary: #F5F0EC;
+$color-additional: #1B5B31;
+
+main {
+    max-width: 1440px;
+    margin: auto;
+    font-family: $font-main;
+    font-size: 16px;
+}
+
+//headers global styling
+h2 {
+    font-size: 12px;
+    color: $color-additional;
+    margin-bottom: 16px;
+}
+
+h3{
+    font-size: 48px;
+    margin-bottom: 32px;
+    font-family: $font-additional;
+    span {
+        font-family: $font-main;
+        font-style: italic;
+    }
+}
+
+h4 {
+    font-family: $font-additional;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+//button global styling
+.btn {
+    min-height: 50px;
+    border-radius: 200px;
+    background: none;
+    transition: all 1s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
