@@ -1,24 +1,27 @@
+.hero-block {
+    position: relative;
 .carousel {
-
+    height: 737px;
+    width: calc(100% + ((100vw - 100%)/2));
+    background-color: $color-primary;
+    position: unset;
     .carousel-inner {
-        position: relative;
-        height: 737px;
-        background-color: $color-primary;
-
+        height: 100%;
         .carousel-item {
             height: 100%;
-
             .row {
                 height: 100%;
 
                 .carousel-slide-left {
                     display: flex;
-                    justify-content: right;
+                    flex: 0.5 0 0;
+                    justify-content: center;
+
                     .carousel-text-wrapper {
-                        
                         position: absolute;
-                        width: 599px;
+                        max-width: 599px;
                         top: 50%;
+                        
                         transform: translateY(-50%);
 
                         .carousel-slide-header {
@@ -37,6 +40,7 @@
                             width: 489px;
                             display: flex;
                             justify-content: space-between;
+
                             .btn-primary {
                                 background-color: $color-additional;
                                 border-color: $color-additional;
@@ -51,11 +55,19 @@
                 }
 
                 .carousel-slide-right {
-                    
+
+                    position: absolute;
+                    height: 100%;
+                    width: calc(50vw);
+                    right: 0;
+                    padding-right: 0;
+                    margin-right: 0;
+                    padding-left: 64px;
                     .img-fluid {
-                        margin-left: 32px;    
+                        
                         height: 100%;
                         object-fit: cover;
+                        width: calc(50vw);
                     }
                 }
 
@@ -68,8 +80,8 @@
         bottom: 0;
         right: 0;
         background-color: $color-secondary;
-        opacity: 1;
-        
+        opacity: 0.8;
+
         .carousel-prev,
         .carousel-next {
             height: 96px;
@@ -78,9 +90,11 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            background: none;
         }
 
-        .carousel-next::before, .carousel-prev::before {
+        .carousel-next::before,
+        .carousel-prev::before {
             content: url("../../img/icons/arrow.png");
             object-fit: none;
             height: 48px;
@@ -93,4 +107,5 @@
 
     }
 
+}
 }

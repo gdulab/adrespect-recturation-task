@@ -63,8 +63,10 @@ const galleryDropdown = () => {
         
         if (gradient.classList.contains('unfolded')) {
             button.innerHTML = "Zwiń ↑";
+            button.style.backgroundColor = "#DCC1AB";
         } else {
             button.innerHTML = "Rozwiń ↓";
+            button.style.backgroundColor = ""
         }
     })
 
