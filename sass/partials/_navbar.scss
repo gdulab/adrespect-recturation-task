@@ -1,6 +1,6 @@
 .navbar {
     background-color: #ffffff !important;
-    
+
     .container-fluid {
         max-width: 1262px;
         height: 72px;
@@ -12,19 +12,36 @@
             font-family: $font-main;
             font-size: 14px;
             align-items: center;
+
             li {
                 margin-left: 48px;
+
+                #nav-search-icon {
+                    cursor: pointer;
+                }
+
                 .nav-search {
+                    
                     transition: all 1s;
                     border-style: none;
+                    border-bottom-style: solid;
+                    border-bottom-color: #ffffff;
                     width: 0px;
-                    
                 }
 
                 .active {
                     border-bottom: 1px;
                     border-bottom-style: solid;
                     width: 250px;
+                }
+            }
+
+            .dropdown-menu {
+                li {
+                    margin-left: 0;
+                    a:hover {
+                        background-color: $color-secondary;
+                    }
                 }
             }
         }

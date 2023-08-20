@@ -1,8 +1,9 @@
 footer {
-
     background-color: black;
     padding: 60px 0;
     color: white;
+    position: relative;
+    z-index: 1;
 
     .row {
         display: flex;

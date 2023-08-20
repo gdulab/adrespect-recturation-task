@@ -1,7 +1,7 @@
 'use strict'
 
 // Search
-function navSearchToggle() {
+const navSearchToggle = () => {
     const navSearchIcon = document.querySelector('#nav-search-icon')
     const navSearchBar = document.querySelector('.nav-search');
 
@@ -13,7 +13,7 @@ function navSearchToggle() {
 navSearchToggle();
 
 // Offer cards click listener
-function offerCardClickHandler() {
+const offerCardClickHandler = () => {
 
     const clickedElement = document.querySelectorAll('.offer-card');
 
@@ -30,3 +30,53 @@ function offerCardClickHandler() {
 }
 
 offerCardClickHandler();
+
+// gallery settings
+
+const macyInstance = new Macy({
+    container: '.grid',
+    columns: 3,
+    margin: {
+        x: 43,
+        y: 43
+    }
+
+});
+
+// gallery dropdown
+const galleryDropdown = () => {
+    const hiddenImages = document.querySelectorAll('.hidden-image');
+    const button = document.getElementById('gallery-dropdown-button');
+    const gradient = document.querySelector('.gradient');
+
+    button.addEventListener('click', function () {
+        console.log('klik');
+
+        for (const hiddenImage of hiddenImages) {
+            hiddenImage.classList.toggle("hidden-image");
+            hiddenImage.classList.toggle("grid-item");
+            
+        }
+        macyInstance.recalculate("height");
+        gradient.classList.toggle('folded');
+        gradient.classList.toggle('unfolded');
+        
+        if (gradient.classList.contains('unfolded')) {
+            button.innerHTML = "Zwiń ↑";
+        } else {
+            button.innerHTML = "Rozwiń ↓";
+        }
+    })
+
+}
+
+galleryDropdown();
+
+// Fancybox settings
+Fancybox.bind("[data-fancybox]", {
+    Toolbar: {
+        display: {
+            right: ["close"]
+        }
+    }
+});

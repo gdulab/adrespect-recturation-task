@@ -43,7 +43,14 @@ h4 {
     border-radius: 200px;
     background: none;
     transition: all 1s;
+    padding: 0 24px;
     &:hover {
         transform: scale(1.05);
+    }
+}
+
+.btn-secondary {
+    &:hover {
+        background: none;
     }
 }
