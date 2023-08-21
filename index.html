@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,24 +27,24 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <button type="button" class="nav-link dropdown-toggle" data-href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Oferta
-                            </a>
+                        </button>
                             <ul class="dropdown-menu" data-toggle="collapse">
-                                <li><a class="dropdown-item" href="#">Projekty</a></li>
-                                <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
-                                <li><a class="dropdown-item" href="#">Realizacje</a></li>
+                                <li><a class="dropdown-item" href="#offer">Projekty</a></li>
+                                <li><a class="dropdown-item" href="#offer">Wizualizacje</a></li>
+                                <li><a class="dropdown-item" href="#offer">Realizacje</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">O firmie</a>
+                            <a class="nav-link" href="#about">O firmie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Realizacje</a>
+                            <a class="nav-link" href="#projects">Realizacje</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" href="#contact">Kontakt</a>
                         </li>
                         <li class="search">
                             <img id="nav-search-icon" src="./img/icons/search.png" alt="search icon">
@@ -56,29 +56,28 @@
             </div>
         </nav>
         <section class="hero-block">
-            <div id="carousel" class="carousel" data-bs-ride="carousel" data-bs-interval="8000">
-                
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-bs-interval="8000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="carousel-slide-left col">
                                 <div class="carousel-text-wrapper">
-                                    <p class="carousel-slide-header">Nowoczesna aranżacja <br>Twojego ogrodu</h2>
+                                    <p class="carousel-slide-header">Nowoczesna aranżacja <br>Twojego ogrodu</p>
                                     <p class="carousel-slide-text">Marka GiardDesign to wieloletnie doświadczenie
                                         i&nbsp;wysoka
                                         estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym
                                         podejściem
                                         do każdego projektu.</p>
                                     <div class="carousel-links-wrapper">
-                                        <button type="button" class="btn btn-primary">Skontaktuj się z nami</button>
-                                        <button type="button" class="btn btn-secondary">Zobacz nasze
-                                            realizacje ↓</button>
+                                        <a href="#contact" class="btn btn-primary">Skontaktuj się z nami</a>
+                                        <a href="#projects" class="btn btn-secondary">Zobacz nasze
+                                            realizacje ↓</a>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="carousel-slide-right col">
-                                <img class="img-fluid" src="/img/carousel1.jpg" alt="carousel1">
+                                <img class="img-fluid" src="./img/carousel1.jpg" alt="carousel1">
                             </div>
                         </div>
                     </div>
@@ -87,22 +86,22 @@
                             <div class="row">
                                 <div class="carousel-slide-left col">
                                     <div class="carousel-text-wrapper">
-                                        <p class="carousel-slide-header">Unikalny <br>design</h2>
+                                        <p class="carousel-slide-header">Unikalny <br>design</p>
                                         <p class="carousel-slide-text">Wieloletnia historia i&nbsp;doskonałość
                                             w&nbsp;wyjątkowych projektach. Specjalizujemy się w&nbsp;kompleksowej
                                             obsłudze projektów, dostosowując się do unikalnych potrzeb każdego klienta.
 
                                         </p>
                                         <div class="carousel-links-wrapper">
-                                            <button type="button" class="btn btn-primary">Skontaktuj się z nami</button>
-                                            <button type="button" class="btn btn-secondary">Zobacz nasze
-                                                realizacje ↓</button>
+                                            <a href="#contact" class="btn btn-primary">Skontaktuj się z nami</a>
+                                            <a href="#projects" class="btn btn-secondary">Zobacz nasze
+                                                realizacje ↓</a>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="carousel-slide-right col">
-                                    <img class="img-fluid" src="/img/carousel2.jpg" alt="carousel2">
+                                    <img class="img-fluid" src="./img/carousel2.jpg" alt="carousel2">
                                 </div>
                             </div>
                         </div>
@@ -112,37 +111,37 @@
                             <div class="row">
                                 <div class="carousel-slide-left col">
                                     <div class="carousel-text-wrapper">
-                                        <p class="carousel-slide-header">W zgodzie <br>z naturą</h2>
+                                        <p class="carousel-slide-header">W zgodzie <br>z naturą</p>
                                         <p class="carousel-slide-text">Tworzymy piękne ogrody, łącząc pasję
                                             projektowania z&nbsp;głębokim szacunkiem dla natury.
                                             Nasze projekty ogrodów nie tylko zachwycają estetyką, ale także podkreślają
                                             nasze zaangażowanie w&nbsp;ochronę środowiska.</p>
                                         <div class="carousel-links-wrapper">
-                                            <button type="button" class="btn btn-primary">Skontaktuj się z nami</button>
-                                            <button type="button" class="btn btn-secondary">Zobacz nasze
-                                                realizacje ↓</button>
+                                            <a href="#contact" class="btn btn-primary">Skontaktuj się z nami</a>
+                                            <a href="#projects" class="btn btn-secondary">Zobacz nasze
+                                                realizacje ↓</a>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="carousel-slide-right col">
-                                    <img class="img-fluid" src="/img/carousel3.jpg" alt="carousel3">
+                                    <img class="img-fluid" src="./img/carousel3.jpg" alt="carousel3">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-buttons">
-                    <button class="carousel-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <div class="carousel-prev" data-bs-target="#carousel" data-bs-slide="prev">
 
-                    </button>
-                    <button class="carousel-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    </div>
+                    <div class="carousel-next" data-bs-target="#carousel" data-bs-slide="next">
 
-                    </button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="offer-block">
+        <section id="offer" class="offer-block">
             <div class="row">
                 <div class="col-9">
                     <div class="offer-text-wrapper">
@@ -156,7 +155,7 @@
                 </div>
             </div>
             <div class="offer-card-wrapper row">
-                <div class="offer-card mb-md-5 col-md-10 mb-lg-0 col-lg-3" href="#offer1">
+                <div class="offer-card mb-5 col-10 mb-lg-0 col-lg-3" data-href="#offer1">
                     <div class="offer-card-content">
                         <img class="offer-card-icon" src="./img/icons/projects.png" alt="projects icon">
                         <h4 class="offer-card-header">Projekty</h4>
@@ -167,7 +166,7 @@
                         <a href="#offer1">Dowiedz sie więcej →</a>
                     </div>
                 </div>
-                <div class="offer-card mb-md-5 col-md-10 col-lg-3" href="#offer2">
+                <div class="offer-card mb-5 col-10 col-lg-3" data-href="#offer2">
                     <div class="offer-card-content">
                         <img class="offer-card-icon" src="./img/icons/visualizations.png" alt="visualizations icon">
                         <h4 class="offer-card-header">Wizualizacje</h4>
@@ -179,7 +178,7 @@
                         <a href="#offer2">Dowiedz sie więcej →</a>
                     </div>
                 </div>
-                <div class="offer-card mb-md-5 col-md-10 col-lg-3" href="#offer3">
+                <div class="offer-card mb-5 col-10 col-lg-3" data-href="#offer3">
                     <div class="offer-card-content">
                         <img class="offer-card-icon" src="./img/icons/realisations.png" alt="realisations icon">
                         <h4 class="offer-card-header">Realizacje</h4>
@@ -192,10 +191,10 @@
                 </div>
             </div>
         </section>
-        <section class="about-block">
+        <section id="about" class="about-block">
             <div class="row">
                 <div class="about-left col">
-                    <img class="img-fluid" src="/img/about-img.png" alt="carousel1">
+                    <img class="img-fluid" src="./img/about-img.png" alt="about img">
                 </div>
                 <div class="about-right col">
                     <div class="about-text-wrapper">
@@ -207,14 +206,14 @@
                             minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane
                             do współczesnego trybu życia.</p>
                         <div class="about-links-wrapper">
-                            <button type="button" class="btn btn-secondary">Poznaj nas bliżej →</button>
+                            <a href="#about" class="btn btn-secondary">Poznaj nas bliżej →</a>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        <section class="projects-block">
+        <section id="projects" class="projects-block">
             <div class="row">
                 <div class="projects-header col-9">
                     <h2 class="projects-header-small">Realizacje</h2>
@@ -222,58 +221,57 @@
                 </div>
             </div>
             <div class="grid">
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery1.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery1.png"><img
                         src="img/gallery/gallery1.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery2.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery2.png"><img
                         src="img/gallery/gallery2.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery3.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery3.png"><img
                         src="img/gallery/gallery3.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery4.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery4.png"><img
                         src="img/gallery/gallery4.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery5.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery5.png"><img
                         src="img/gallery/gallery5.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery6.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery6.png"><img
                         src="img/gallery/gallery6.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery7.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery7.png"><img
                         src="img/gallery/gallery7.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery8.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery8.png"><img
                         src="img/gallery/gallery8.png" alt=""></div>
-                <div class="grid-item" data-fancybox data-src="img/gallery/gallery9.png"><img
+                <div class="grid-item" data-fancybox="gallery" data-src="img/gallery/gallery9.png"><img
                         src="img/gallery/gallery9.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery10.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery10.png"><img
                         src="img/gallery/gallery10.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery11.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery11.png"><img
                         src="img/gallery/gallery11.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery12.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery12.png"><img
                         src="img/gallery/gallery12.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery13.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery13.png"><img
                         src="img/gallery/gallery13.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery14.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery14.png"><img
                         src="img/gallery/gallery14.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery15.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery15.png"><img
                         src="img/gallery/gallery15.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery16.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery16.png"><img
                         src="img/gallery/gallery16.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery17.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery17.png"><img
                         src="img/gallery/gallery17.png" alt=""></div>
-                <div class="hidden-image" data-fancybox data-src="img/gallery/gallery18.png"><img
+                <div class="hidden-image" data-fancybox="gallery" data-src="img/gallery/gallery18.png"><img
                         src="img/gallery/gallery18.png" alt=""></div>
             </div>
             <div class="gallery-button-wrapper">
-                <button id="gallery-dropdown-button" class="btn btn-secondary">Rozwiń ↓</button>
+                <button type="button" id="gallery-dropdown-button" class="btn btn-secondary">Rozwiń ↓</button>
             </div>
             <div class="gradient folded"></div>
         </section>
-        <section class="contact-block">
+        <section id="contact" class="contact-block">
             <div class="row">
                 <div class="contact-content-wrapper col-9">
-
                     <div class="contact-content-left">
                         <h3>Zostańmy w&nbsp;kontakcie! <br>Znajdziesz nas na <span>Instagramie.</span></h3>
                     </div>
                     <div class="contact-content-right">
                         <p>Śledź nasze<br>najnowsze realizacje!</p>
-                        <button type="button" class="btn btn-primary">Instagram</button>
+                        <a href="#instagram" class="btn btn-primary">Instagram</a>
                     </div>
                 </div>
             </div>
@@ -286,7 +284,7 @@
                     </div>
                     <div class="footer-upper-right">
                         <p>Daj znać, co możemy dla Ciebie zrobić!</p>
-                        <button type="button" class="btn btn-primary">Skontaktuj się z nami</button>
+                        <a href="#cont" class="btn btn-primary">Skontaktuj się z nami</a>
                     </div>
                 </div>
             </div>
@@ -294,15 +292,15 @@
                 <div class="footer-middle col-9">
                     <div class="footer-middle-left">
                         <ul class="footer-links-left">
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#cont">Kontakt</a></li>
+                            <li><a href="#instagram">Instagram</a></li>
+                            <li><a href="#facebook">Facebook</a></li>
+                            <li><a href="#linkedin">Linkedin</a></li>
                         </ul>
                     </div>
                     <div class="footer-middle-right">
                         <ul class="footer-links-right">
-                            <li><a href="tel:+00000000000">000-000-000</a></li>
+                            <li><a href="tel:+00000000000">000&#8209;000&#8209;000</a></li>
                             <li><a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a></li>
                         </ul>
                     </div>
@@ -311,11 +309,11 @@
             <div class="row">
                 <div class="footer-bottom col-9">
                     <div class="footer-bottom-left">
-                        <p>Prawa zastrzeżone © 2022</p>
+                        <p>Prawa zastrzeżone © 2023</p>
                     </div>
                     <div class="footer-bottom-right">
                         <p>made by</p>
-                        <img src="./img/adrespect.png" alt="adrespect logo">
+                        <a href="https://adrespect.pl/"> <img src="./img/adrespect.png" alt="adrespect logo"></a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,4 @@
+- Breakpointy: 992 i 576 (domyśle wartości bootstrapa)
+- Do stworzenia galeii wykorzystano biblotekę Macy: http://macyjs.com/
+- Do stworzenia lightboxów wykorzystano biblotekę FancyBox: https://fancyapps.com/fancybox/
+- Zdjęcia w galerii pochodzą z otrzymanego projektu i bibloteki Pexels: https://www.pexels.com/

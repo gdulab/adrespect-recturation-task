@@ -4,6 +4,7 @@
 
     .row {
         height: 100%;
+        justify-content: flex-end;
         .about-left {
             height: 720px;
             max-width: calc(50vw);
@@ -20,19 +21,25 @@
 
         .about-right {
             display: flex;
-            justify-content: right;
+            flex: 0.5 0 0;
             position: relative;
+            right: 0;
+            justify-content: center;
+            
 
             .about-header-small {
                 color: white;
             }
 
             .about-text-wrapper {
+                display: flex;
+                flex-direction: column;
                 position: absolute;
-                width: 599px;
+                max-width: 599px;
                 top: 50%;
                 transform: translateY(-50%);
                 color: white;
+                align-items: flex-start;
 
                 .carousel-slide-header {
                     font-family: $font-additional;
@@ -42,20 +49,43 @@
                 }
 
                 .about-text {
-                    width: 489px;
+                    max-width: 100%;
                     margin-bottom: 72px;
                 }
 
                 .about-links-wrapper {
-                    width: 489px;
+                    width: 100%;
                     display: flex;
-                    justify-content: space-between;
+                    
 
                     .btn-secondary {
                         border-color: white;
 
                     }
                 }
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .about-right {
+        flex: 1 0 0 !important;
+        .about-text-wrapper{
+            width: calc(100% - 40px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            background-color: $color-secondary-w-opacity;
+            color: black !important;
+            h2 {
+                color: black !important;
+            }
+            .btn {
+                border-color: black !important;
+                color: black ;
             }
         }
     }

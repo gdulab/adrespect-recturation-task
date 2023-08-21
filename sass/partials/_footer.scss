@@ -33,6 +33,9 @@ footer {
                     background-color: $color-additional;
                 }
             }
+            .footer-upper-left {
+                margin-right: 32px;
+            }
         }
 
         .footer-middle {
@@ -89,5 +92,25 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media(max-width: 992px) {
+    .footer-upper {
+        flex-direction: column !important;
+        .footer-upper-left {
+            margin-bottom: 24px;
+            
+        }
+        .footer-upper-right {
+            justify-content: space-between;
+        }
+    }
+    .footer-links-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column !important;
     }
 }

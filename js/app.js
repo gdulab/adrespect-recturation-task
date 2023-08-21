@@ -20,7 +20,7 @@ const offerCardClickHandler = () => {
     clickedElement.forEach(div => {
         div.addEventListener('click', function () {
 
-            const link = this.getAttribute('href');
+            const link = this.getAttribute('data-href');
             console.log('click ' + link);
             window.location.href = link;
 
@@ -39,7 +39,25 @@ const macyInstance = new Macy({
     margin: {
         x: 43,
         y: 43
+    },
+    breakAt: {
+        992: {
+            margin: {
+                x: 0,
+                y: 24,
+            },
+            columns: 2
+        },
+        
+        576: {
+            margin: {
+                x: 0,
+                y: 24,
+            },
+            columns: 1
+        }
     }
+    
 
 });
 
@@ -55,18 +73,19 @@ const galleryDropdown = () => {
         for (const hiddenImage of hiddenImages) {
             hiddenImage.classList.toggle("hidden-image");
             hiddenImage.classList.toggle("grid-item");
-            
+
         }
         macyInstance.recalculate("height");
         gradient.classList.toggle('folded');
         gradient.classList.toggle('unfolded');
-        
+
         if (gradient.classList.contains('unfolded')) {
             button.innerHTML = "Zwiń ↑";
-            button.style.backgroundColor = "#DCC1AB";
+            button.style.backgroundColor = "rgb(220, 193, 171, 0.8)";
         } else {
             button.innerHTML = "Rozwiń ↓";
             button.style.backgroundColor = ""
+            button.style.transform = "transitionY(50%)"
         }
     })
 
@@ -75,10 +94,10 @@ const galleryDropdown = () => {
 galleryDropdown();
 
 // Fancybox settings
-Fancybox.bind("[data-fancybox]", {
+Fancybox.bind('[data-fancybox="gallery"]', {
     Toolbar: {
         display: {
             right: ["close"]
         }
-    }
+    },
 });

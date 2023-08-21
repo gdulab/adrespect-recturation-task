@@ -3,9 +3,17 @@ $font-main: 'Inter', sans-serif;
 $font-additional: 'Montserrat', sans-serif;
 
 //colors
-$color-primary:  #DCC1AB;
-$color-secondary: #F5F0EC;
-$color-additional: #1B5B31;
+$color-primary: rgb(220, 193, 171);
+$color-secondary: rgb(245, 240, 236);
+$color-additional: rgb(27, 91, 49);
+$color-primary-w-opacity: rgb(220, 193, 171, 0.8);
+$color-secondary-w-opacity: rgb(245, 240, 236, 0.8);
+$color-additional-w-opacity: rgb(27, 91, 49, 0.8);
+
+//overlay settings
+body {
+    overflow-x: hidden;
+}
 
 main {
     max-width: 1440px;
@@ -21,10 +29,11 @@ h2 {
     margin-bottom: 16px;
 }
 
-h3{
+h3 {
     font-size: 48px;
     margin-bottom: 32px;
     font-family: $font-additional;
+
     span {
         font-family: $font-main;
         font-style: italic;
@@ -44,6 +53,9 @@ h4 {
     background: none;
     transition: all 1s;
     padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
         transform: scale(1.05);
     }
@@ -53,4 +65,9 @@ h4 {
     &:hover {
         background: none;
     }
+}
+
+.row {
+    max-width: 100vw;
+    margin: 0;
 }
