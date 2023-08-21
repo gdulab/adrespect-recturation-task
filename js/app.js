@@ -36,6 +36,7 @@ offerCardClickHandler();
 const macyInstance = new Macy({
     container: '.grid',
     columns: 3,
+    waitForImages: true,
     margin: {
         x: 43,
         y: 43

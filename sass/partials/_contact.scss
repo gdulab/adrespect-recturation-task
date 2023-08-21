@@ -48,8 +48,15 @@
             }
         }
         .contact-content-right {
+            width: 100%;
             display: flex;
-            flex-direction: column;
+            justify-content: space-around;
         }
+    }
+}
+
+@media(max-width: 576px){
+    .contact-content-right {
+        flex-direction: column;
     }
 }
